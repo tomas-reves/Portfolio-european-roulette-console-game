@@ -17,7 +17,6 @@ place_columns_bet_amount = None
 dict_of_bets = {}
 
 while True:
-
     print("==========================================================")
     try:
         game_input = int(input(f"ENTER NUMBER TO SELECT GAME"

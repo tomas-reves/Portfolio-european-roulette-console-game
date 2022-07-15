@@ -57,10 +57,13 @@ class RouletteGame:  # EUROPEAN ROULETTE
                          f"losses: {bet_color_amount} EUR")
 
     def check_if_num_even_or_odd(self):
-        if self.random_roulette_selection % 2 == 0:
-            return "EVEN"
+        if self.random_roulette_selection != 0:
+            if self.random_roulette_selection % 2 == 0:
+                return "EVEN"
+            else:
+                return "ODD"
         else:
-            return "ODD"
+            return "Neither even, not odd"
 
     def even_odd_game(self, bet_odd_or_even, bet_odd_or_even_amount):
         if self.check_if_num_even_or_odd() == bet_odd_or_even.upper():
@@ -68,14 +71,14 @@ class RouletteGame:  # EUROPEAN ROULETTE
                   f"{self.check_if_num_even_or_odd()}  - YOU WON {bet_odd_or_even_amount * 2} EUR")
             self.winnings += bet_odd_or_even_amount * 2
             logging.info(f"Bet: {bet_odd_or_even}, bet amount: {bet_odd_or_even_amount}, "
-                         f"{self.random_roulette_selection} - {self.check_if_num_even_or_odd()}, "
+                         f"roulette number: {self.random_roulette_selection} - {self.check_if_num_even_or_odd()}, "
                          f"winnings: {bet_odd_or_even_amount * 2} EUR")
         else:
             print(f"You bet {bet_odd_or_even}, roulette number: {self.random_roulette_selection}, which is "
                   f"{self.check_if_num_even_or_odd()}  - YOU LOST {bet_odd_or_even_amount} EUR")
             self.winnings -= bet_odd_or_even_amount
             logging.info(f"Bet: {bet_odd_or_even}, bet amount: {bet_odd_or_even_amount}, "
-                         f"{self.random_roulette_selection} - {self.check_if_num_even_or_odd()}, "
+                         f" roulette number: {self.random_roulette_selection} - {self.check_if_num_even_or_odd()}, "
                          f"losses: {bet_odd_or_even_amount} EUR")
 
     def check_number_dozen(self):
