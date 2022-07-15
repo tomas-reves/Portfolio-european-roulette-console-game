@@ -1,2 +1,4 @@
 2022-07-15 21:37:10,914:INFO:Bet: even, bet amount: 100, 4 - EVEN, winnings: 200 EUR
 2022-07-15 21:37:43,459:INFO:Bet: odd, bet amount: 1, 35 - ODD, winnings: 2 EUR
+2022-07-15 21:51:13,358:INFO:Bet: red, bet amount: 100, roulette number: 36 - RED, winning: 200 EUR
+2022-07-15 21:59:55,764:INFO:Bet: red, bet amount: 100, roulette number: 2 - BLACK, losses: 100 EUR
